@@ -54,7 +54,9 @@ python scripts/data_preparation/generate_meta_info.py --dataset_path 'The root o
 
 ### Testing Data
 
-The test sets can be downloaded from (...To be uploaded) or you can synthesize them through `synthesize_datasets.py`.
+The test sets can be downloaded from (...To be uploaded)(通过网盘分享的文件：datasets
+链接: https://pan.baidu.com/s/1AGI4b8Z8AOYH1HRP7Ncbxg?pwd=s28n 提取码: s28n 
+--来自百度网盘超级会员v6的分享) or you can synthesize them through `synthesize_datasets.py`.
 
 ## Testing
 
