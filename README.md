@@ -58,7 +58,9 @@ The test sets can be downloaded from (...To be uploaded) or you can synthesize t
 
 ## Testing
 
-1. Download the pretrained weights of SPyNet and PGENet from (...To be uploaded).
+1. Download the pretrained weights of SPyNet and PGENet from (...To be uploaded)(通过网盘分享的文件：models
+链接: https://pan.baidu.com/s/1d_O5nnns4WnPcCcLi328ig?pwd=24qj 提取码: 24qj 
+--来自百度网盘超级会员v6的分享).
 2. Put the SPyNet weights to `experiments/pretrained_models/flownet/` and PGENet weights to `experiments/pretrained_models/`.
 3. Modify the option yaml file in `options/test/` to begin. Then run the testing.
 ```
