@@ -1,15 +1,15 @@
-name: PGENet_DAVIS_T6 # The name of experiments
+name: PGENet_Set8_T6
 model_type: VideoRecurrentModel
 scale: 1
 num_gpu: 1  # set num_gpu: 0 for cpu mode
 manual_seed: 0
 
 datasets:
-  test:
-    name: DAVIS_AIO_T6_Test
+  test_0:
+    name: Set8_AIO_T6_Test
     type: VideoRecurrentTestDataset
-    dataroot_lq: datasets/DAVIS_t6 # The root of lq frames
-    dataroot_gt: datasets/DAVIS-GT # The root of GT frames
+    dataroot_lq: datasets/Set8_t6 # The root of lq frames
+    dataroot_gt: datasets/Set8-GT # The root of GT frames
 
     cache_data: true
     io_backend:
@@ -22,11 +22,11 @@ network_g:
   type: PGENet
   mid_channels: 96
   prompt_dim: 96
-  prompt_size: 96  # 需要添加这个参数，与训练配置一致
+  prompt_size: 96
   num_blocks: 7
-  keyframe_interval: 6  # 需要添加这个参数，与训练配置一致
+  keyframe_interval: 6
   spynet_pretrained: experiments/pretrained_models/flownet/spynet_sintel_final-3d2a1287.pth
-  mode_config:  # 需要添加这个配置块，与训练配置一致
+  mode_config:
     dim: 96
     rank: 2
     num_experts: 4
@@ -40,12 +40,12 @@ network_g:
 path:
   pretrain_network_g: experiments/pretrained_models/PGENet.pth
   strict_load_g: true
-
 # validation settings
 val:
   save_img: true
   suffix: ~  # add suffix to saved images, if None, use exp name
-  patch_testing_size: 0
+  seq_padding_size: 0
+  patch_testing_size: 512
   overlap_size: 20
 
   metrics:
