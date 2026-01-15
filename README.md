@@ -40,7 +40,9 @@ Ubuntu18.04、CUDA11.1、CUDNN8、Python3.7.5、OpenCV4.5.1、PyTorch1.12
 
 ### Training Data
 
-1. Download the DAVIS dataset from (...To be uploaded).
+1. Download the DAVIS dataset from (...To be uploaded)(通过网盘分享的文件：datasets
+链接: https://pan.baidu.com/s/1AGI4b8Z8AOYH1HRP7Ncbxg?pwd=s28n 提取码: s28n 
+--来自百度网盘超级会员v6的分享).
 2. Synthesize the low-quality (LQ) videos through `scripts/data_preparation/synthesize_datasets.py`.
 ```
 python scripts/data_preparation/synthesize_datasets.py --input_dir 'The root of DAVIS' --output_dir 'LQ roots' --continuous_frames 6
